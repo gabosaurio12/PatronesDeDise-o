@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fachada.gui.PaginaPrincipalControlador">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#7c9ab5" height="610.0" layoutX="-6.0" layoutY="-3.0" stroke="BLACK" strokeType="INSIDE" width="812.0" />
+      <Button id="botonIniciarSesion" fx:id="botonIniciarSesion" layoutX="159.0" layoutY="155.0" mnemonicParsing="false" onAction="#iniciarSesion" prefHeight="72.0" prefWidth="145.0" text="Iniciar Sesion">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button id="botonFinalizarSesion" fx:id="botonFinalizarSesion" layoutX="503.0" layoutY="155.0" mnemonicParsing="false" onAction="#finalizarSesion" prefHeight="72.0" prefWidth="145.0" text="Finalizar Sesion">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <TableView id="tabla" fx:id="tabla" layoutX="186.0" layoutY="348.0" prefHeight="200.0" prefWidth="433.0">
+        <columns>
+          <TableColumn id="columnaGuitarra" fx:id="columnaGuitarra" prefWidth="75.0" text="Guitarra" />
+          <TableColumn id="columnaAmplificador" fx:id="columnaAmplificador" prefWidth="75.0" text="Amplificador" />
+            <TableColumn id="columnaPedal" fx:id="columnaPedal" prefWidth="75.0" text="Pedal" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Circle fill="#ebebeb" layoutX="155.0" layoutY="52.0" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#ebebeb" layoutX="402.0" layoutY="58.0" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#ebebeb" layoutX="649.0" layoutY="61.0" radius="36.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#3b3d40" layoutX="96.0" layoutY="407.0" radius="80.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#3b3d40" layoutX="709.0" layoutY="397.0" radius="80.0" stroke="BLACK" strokeType="INSIDE" />
+      <Button id="botonTocarGuitarra" fx:id="botonTocarGuitarra" layoutX="328.0" layoutY="255.0" mnemonicParsing="false" onAction="#tocarGuitarra" prefHeight="72.0" prefWidth="145.0" text="Tocar Guitarra">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>

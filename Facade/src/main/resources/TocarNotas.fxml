@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fachada.gui.TocarNotasControlador">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#7c9ab5" height="350.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" width="520.0" />
+      <Label layoutX="88.0" layoutY="70.0" text="Primera cuerda (E)" />
+      <Label layoutX="82.0" layoutY="105.0" text="Segunda cuerda (B)" />
+      <Label layoutX="86.0" layoutY="138.0" text="Tercera cuerda (G)" />
+      <Label layoutX="92.0" layoutY="174.0" text="Cuarta cuerda (D)" />
+      <Label layoutX="93.0" layoutY="205.0" text="Quinta cuerda (B)" />
+      <Label layoutX="101.0" layoutY="239.0" text="Sexta cuerda (E)" />
+      <ComboBox id="comboPrimeraCuerda" fx:id="comboPrimeraCuerda" layoutX="198.0" layoutY="66.0" prefWidth="150.0" />
+      <ComboBox id="comboSegundaCuerda" fx:id="comboSegundaCuerda" layoutX="198.0" layoutY="101.0" prefWidth="150.0" />
+      <ComboBox id="comboTerceraCuerda" fx:id="comboTerceraCuerda" layoutX="198.0" layoutY="134.0" prefWidth="150.0" />
+      <ComboBox id="comboCuartaCuerda" fx:id="comboCuartaCuerda" layoutX="198.0" layoutY="168.0" prefWidth="150.0" />
+      <ComboBox id="comboQuintaCuerda" fx:id="comboQuintaCuerda" layoutX="199.0" layoutY="201.0" prefWidth="150.0" />
+      <ComboBox id="comboSextaCuerda" fx:id="comboSextaCuerda" layoutX="199.0" layoutY="235.0" prefWidth="150.0" />
+      <Button id="rockanrolea" fx:id="rockanrolea" layoutX="227.0" layoutY="292.0" mnemonicParsing="false" onAction="#tocarNotas" text="Rockanrolea!" />
+   </children>
+</Pane>
