@@ -3,7 +3,7 @@ package fachada.gui;
 import fachada.modelo.Amplificador;
 import fachada.modelo.Guitarra;
 import fachada.modelo.Pedal;
-import fachada.prepararguitarra.FachadaGuitarraElectrica;
+import fachada.fachadaguitarraelectrica.FachadaGuitarraElectrica;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -19,10 +19,6 @@ public class PaginaPrincipalControlador {
     FachadaGuitarraElectrica fachada = new FachadaGuitarraElectrica();
 
     @FXML
-    private Button botonIniciarSesion;
-    @FXML
-    private Button botonFinalizarSesion;
-    @FXML
     private TableView<FachadaGuitarraElectrica> tabla;
     @FXML
     private TableColumn<Guitarra, String> columnaGuitarra;
@@ -30,9 +26,6 @@ public class PaginaPrincipalControlador {
     private TableColumn<Amplificador, String> columnaAmplificador;
     @FXML
     private TableColumn<Pedal, String> columnaPedal;
-
-    @FXML
-    private Button botonTocarGuitarra;
 
     public void iniciarSesion() {
         fachada.iniciarSesion();
@@ -66,6 +59,4 @@ public class PaginaPrincipalControlador {
         controlador.configurarCuerdas();
         controlador.setFachada(fachada);
     }
-
-
 }

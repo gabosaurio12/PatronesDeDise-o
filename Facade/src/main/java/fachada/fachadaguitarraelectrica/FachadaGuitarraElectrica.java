@@ -1,4 +1,4 @@
-package fachada.prepararguitarra;
+package fachada.fachadaguitarraelectrica;
 
 import fachada.modelo.Amplificador;
 import fachada.modelo.Cable;
@@ -6,9 +6,9 @@ import fachada.modelo.Guitarra;
 import fachada.modelo.Pedal;
 
 public class FachadaGuitarraElectrica {
-    private Pedal pedal;
-    private Amplificador amplificador;
-    private Guitarra guitarra;
+    private final Pedal pedal;
+    private final Amplificador amplificador;
+    private final Guitarra guitarra;
 
     public FachadaGuitarraElectrica() {
         pedal = new Pedal();
@@ -20,24 +20,12 @@ public class FachadaGuitarraElectrica {
         return pedal;
     }
 
-    public void setPedal(Pedal pedal) {
-        this.pedal = pedal;
-    }
-
     public Amplificador getAmplificador() {
         return amplificador;
     }
 
-    public void setAmplificador(Amplificador amplificador) {
-        this.amplificador = amplificador;
-    }
-
     public Guitarra getGuitarra() {
         return guitarra;
-    }
-
-    public void setGuitarra(Guitarra guitarra) {
-        this.guitarra = guitarra;
     }
 
     public void conectarInstrumentos() {
@@ -78,6 +66,6 @@ public class FachadaGuitarraElectrica {
     }
 
     public void tocarGuitarra(String[] notas) {
-        guitarra.tocarNotas(notas, this);
+        guitarra.tocarNotas(notas);
     }
 }

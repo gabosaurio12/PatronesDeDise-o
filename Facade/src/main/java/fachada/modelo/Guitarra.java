@@ -1,11 +1,10 @@
 package fachada.modelo;
 
-import fachada.prepararguitarra.FachadaGuitarraElectrica;
 import javafx.scene.control.Alert;
 
 public class Guitarra {
-    private int cuerdas;
-    private String marca;
+    private final int cuerdas;
+    private final String marca;
     private boolean[] pastillas;
     private String afinacion;
     private Cable cable;
@@ -15,34 +14,6 @@ public class Guitarra {
         marca = "Gibson Les Paul";
         pastillas = new boolean[] {true, true};
         afinacion = "EADGBE";
-    }
-
-    public int getCuerdas() {
-        return cuerdas;
-    }
-
-    public void setCuerdas(int cuerdas) {
-        this.cuerdas = cuerdas;
-    }
-
-    public String getMarca() {
-        return marca;
-    }
-
-    public void setMarca(String marca) {
-        this.marca = marca;
-    }
-
-    public boolean[] getPastillas() {
-        return pastillas;
-    }
-
-    public void setPastillas(boolean[] pastillas) {
-        this.pastillas = pastillas;
-    }
-
-    public String getAfinacion() {
-        return afinacion;
     }
 
     public void setAfinacion(String afinacion) {
@@ -57,7 +28,7 @@ public class Guitarra {
         this.cable = cable;
     }
 
-    public void tocarNotas(String[] notas, FachadaGuitarraElectrica fachada) {
+    public void tocarNotas(String[] notas) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Tocar notas en la guitarra");
         String mensaje = "Se estan tocando las notas: \n";
@@ -65,13 +36,14 @@ public class Guitarra {
             if (i != null) {
                 mensaje = mensaje.concat(i + "\n");
             } else {
-                mensaje = mensaje.concat("\n");
+                mensaje = mensaje.concat("0\n");
             }
         }
         alert.setContentText(mensaje);
         alert.showAndWait();
 
-        fachada.getPedal().codificarSonido(notas, fachada);
+        Pedal pedal = (Pedal) cable.getEntradaB();
+        pedal.codificarSonido(notas);
     }
 
     @Override

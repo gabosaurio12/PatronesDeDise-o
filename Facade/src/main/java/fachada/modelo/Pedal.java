@@ -1,6 +1,6 @@
 package fachada.modelo;
 
-import fachada.prepararguitarra.FachadaGuitarraElectrica;
+import fachada.fachadaguitarraelectrica.FachadaGuitarraElectrica;
 
 public class Pedal {
     private String tipo;
@@ -75,8 +75,7 @@ public class Pedal {
         this.cableSalida = cableSalida;
     }
 
-
-        public void encender() {
+    public void encender() {
         this.estado = true;
     }
 
@@ -84,7 +83,7 @@ public class Pedal {
         this.estado = false;
     }
 
-    public void codificarSonido(String[] notas, FachadaGuitarraElectrica fachada) {
+    public void codificarSonido(String[] notas) {
         String[] notasCodificadas = new String[6];
         int i = 0;
         for (String j : notas) {
@@ -96,7 +95,8 @@ public class Pedal {
             i++;
         }
 
-        fachada.getAmplificador().emitirSonido(notasCodificadas);
+        Amplificador amplificador = (Amplificador) cableSalida.getEntradaB();
+        amplificador.emitirSonido(notasCodificadas);
     }
 
     @Override

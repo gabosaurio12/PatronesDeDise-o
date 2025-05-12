@@ -1,10 +1,9 @@
 package fachada.gui;
 
-import fachada.prepararguitarra.FachadaGuitarraElectrica;
+import fachada.fachadaguitarraelectrica.FachadaGuitarraElectrica;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 
 import java.util.Arrays;
@@ -23,8 +22,6 @@ public class TocarNotasControlador {
     private ComboBox<String> comboQuintaCuerda;
     @FXML
     private ComboBox<String> comboSextaCuerda;
-    @FXML
-    private Button rockanrolea;
 
     public void tocarNotas() {
         String[] notas = new String[6];

@@ -3,7 +3,7 @@ package fachada.modelo;
 import fachada.reproducir.ReproductorMP3;
 
 public class Amplificador {
-    private String tipo;
+    private final String tipo;
     private int volumen;
     private int efecto;
     private int efectoAuxiliar;
@@ -16,54 +16,6 @@ public class Amplificador {
         efecto = 0;
         efectoAuxiliar = 0;
         estado = false;
-    }
-
-    public String getTipo() {
-        return tipo;
-    }
-
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
-    }
-
-    public int getVolumen() {
-        return volumen;
-    }
-
-    public void setVolumen(int volumen) {
-        this.volumen = volumen;
-    }
-
-    public int getEfecto() {
-        return efecto;
-    }
-
-    public void setEfecto(int efecto) {
-        this.efecto = efecto;
-    }
-
-    public int getEfectoAuxiliar() {
-        return efectoAuxiliar;
-    }
-
-    public void setEfectoAuxiliar(int efectoAuxiliar) {
-        this.efectoAuxiliar = efectoAuxiliar;
-    }
-
-    public boolean isEstado() {
-        return estado;
-    }
-
-    public void setEstado(boolean estado) {
-        this.estado = estado;
-    }
-
-    public Cable getCable() {
-        return cable;
-    }
-
-    public void setCable(Cable cable) {
-        this.cable = cable;
     }
 
     public void encender() {
